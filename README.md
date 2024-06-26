@@ -50,11 +50,11 @@ python3 src/evaluate_data.py
 
 ## Output
 The scripts will generate files in the `processed` and `output` directories:
-/processed
+#/processed
 1. **patients_summary.txt**: A summary of patient data.
 2. **cleaned_data.csv**: The cleaned and processed data.
 3. **data_cleanup_stats.txt**: Statistics about the data cleaning process.
-/output
+#/output
 4. **explained_variance_ratio.png**: Bar graph of the explained variance ratio by principal component.
 5. **PCA_{i}_explained_variance.png**: Cumulative explained variance plots for each principal component.
 6. **PC{i}_boxplot.png**: Box plots for each principal component across different phenotypes.

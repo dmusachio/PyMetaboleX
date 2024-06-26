@@ -1,0 +1,40 @@
+Patients in master with one vial and matching phenotypes
+22
+17
+14
+18
+3
+26
+4
+19
+21
+24
+33
+36
+35
+34
+16
+25
+6
+7
+28
+15
+10
+1
+20
+30
+8
+37
+12
+31
+38
+29
+
+Patients with two vials
+13
+23
+
+Patients not in master
+11
+9
+32

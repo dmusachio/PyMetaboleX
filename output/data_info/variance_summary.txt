@@ -1,0 +1,7 @@
+Explained Variance Ratio for Each Principal Component:
+PC1: 0.5513 (55.13% of total variance)
+PC2: 0.2025 (20.25% of total variance)
+PC3: 0.1081 (10.81% of total variance)
+PC4: 0.0503 (5.03% of total variance)
+PC5: 0.0294 (2.94% of total variance)
+PC6: 0.0144 (1.44% of total variance)

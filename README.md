@@ -48,16 +48,19 @@ Execute the scripts sequentially:
 python3 src/data_harmonization.py
 python3 src/evaluate_data.py
 
-## Output
-The scripts will generate files in the `processed` and `output` directories:
-#/processed
-1. **patients_summary.txt**: A summary of patient data.
-2. **cleaned_data.csv**: The cleaned and processed data.
-3. **data_cleanup_stats.txt**: Statistics about the data cleaning process.
-#/output
-4. **explained_variance_ratio.png**: Bar graph of the explained variance ratio by principal component.
-5. **PCA_{i}_explained_variance.png**: Cumulative explained variance plots for each principal component.
-6. **PC{i}_boxplot.png**: Box plots for each principal component across different phenotypes.
+## Output Details
+
+The scripts will generate files in the `processed` and `output` directories as described below:
+
+### Processed Directory
+- **`patients_summary.txt`**: A summary of patient data.
+- **`cleaned_data.csv`**: The cleaned and processed data.
+- **`data_cleanup_stats.txt`**: Statistics about the data cleaning process.
+
+### Output Directory
+- **`explained_variance_ratio.png`**: Bar graph of the explained variance ratio by principal component.
+- **`PCA_{i}_explained_variance.png`**: Cumulative explained variance plots for each principal component.
+- **`PC{i}_boxplot.png`**: Box plots for each principal component across different phenotypes.
 
 ## Notes
 - Ensure the input files are correctly named and placed in the `input` directory.

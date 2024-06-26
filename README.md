@@ -4,23 +4,31 @@
 The project includes scripts that process, harmonize, and analyze data from three input Excel files. These scripts perform data cleaning, patient ID matching, phenotype harmonization, and statistical analysis using PCA and MANOVA.
 
 ## Directory Structure
+```plaintext
 your_project_folder/
 ├── input/
-│ ├── metabolite_data.xlsx
-│ ├── meta_data.xlsx
-│ └── master_data.xlsx
+│   ├── metabolite_data.xlsx
+│   ├── meta_data.xlsx
+│   └── master_data.xlsx
 ├── src/
-│ ├── data_harmonization.py
-│ └── evaluate_data.py
+│   ├── data_harmonization.py
+│   └── evaluate_data.py
 ├── processed/
-│ ├── patients_summary.txt
-│ ├── cleaned_data.csv
-│ └── data_cleanup_stats.txt
+│   ├── patients_summary.txt
+│   ├── cleaned_data.csv
+│   └── data_cleanup_stats.txt
 ├── output/
-│ ├── explained_variance_ratio.png
-│ ├── PCA_{i}_explained_variance.png (for each principal component i)
-│ └── PC{i}_boxplot.png (for each principal component i)
+│   ├── explained_variance_ratio.png
+│   ├── PCA_{i}_explained_variance.png    # for each principal component i
+│   └── PC{i}_boxplot.png                  # for each principal component i
 └── README.md
+
+input/: Contains all raw Excel data files.
+src/: Python scripts for data processing and evaluation.
+processed/: Processed data outputs, summaries, and statistics.
+output/: Visualizations such as variance explained and boxplots for each principal component
+
+```
 
 ## Setup
 

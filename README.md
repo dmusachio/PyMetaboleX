@@ -45,8 +45,8 @@ All dependencies should be pre-installed on biowulf.
 
 Execute the scripts sequentially:
 
-# python3 src/data_harmonization.py 
-# python3 src/evaluate_data.py
+python3 src/data_harmonization.py \
+python3 src/evaluate_data.py
 
 ## Output Details
 

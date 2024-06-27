@@ -66,5 +66,10 @@ The scripts will generate files in the `processed` and `output` directories as d
 - Ensure the input files are correctly named and placed in the `input` directory.
 - The scripts dynamically set input and output paths relative to the script location, facilitating easy execution from any environment.
 
+## Next Steps
+- Organize data into parametric and non-parametric data: Done
+- Run neccesary tests on parametric data (t-test, ANOVA)
+- Run neccesary tests on non-parametric data (Mann-Whitney U, Spearman's rank coefficient)
+
 ## Contributing
 Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue.

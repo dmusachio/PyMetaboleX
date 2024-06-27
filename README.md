@@ -18,9 +18,10 @@ your_project_folder/
 │   ├── cleaned_data.csv
 │   └── data_cleanup_stats.txt
 ├── output/
-│   ├── explained_variance_ratio.png
-│   ├── PCA_{i}_explained_variance.png    # for each principal component i
-│   └── PC{i}_boxplot.png                  # for each principal component i
+│   ├── data_info/
+|       ├── explained_variance_ratio.png
+|       ├── PCA_{i}_explained_variance.png    # for each principal component i
+|       └── PC{i}_boxplot.png                  # for each principal component i
 └── README.md
 
 input/: Contains all raw Excel data files.

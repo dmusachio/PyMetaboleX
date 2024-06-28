@@ -30,19 +30,41 @@ processed/: Processed data outputs, summaries, and statistics.
 output/: Visualizations such as variance explained and boxplots for each principal component
 
 ```
-
-## Setup
-
 ### Prerequisites
 - Access to NIH biowulf account.
 
 ### Installing Dependencies
 All dependencies should be pre-installed on biowulf.
 
+## Setup
+
+### Generating Personal Access Token and Cloning Repository
+
+1. **Generate a Personal Access Token (PAT)**:
+   - Log in to GitHub into an account that has been added to the repo.
+   - Navigate to `Settings` > `Developer settings` > `Personal access tokens`.
+   - Click on `Generate new token`.
+   - Select the scopes or permissions you'd like to grant this token (at minimum, `repo` scope for private repositories).
+   - Click `Generate token`.
+   - Copy the token now. You won’t be able to see it again!
+
+2. **Clone the Repository Using HTTPS**:
+   - Log into biowulf and navigate to root directory where you want to clone the code
+   - Use the HTTPS URL for cloning.
+   - Run the following command in the terminal:
+     ```bash
+     git clone https://github.com/dmusachio/Malnutrition_Metabolite_Project.git
+     ```
+   - When prompted for a username and password:
+     - Enter your GitHub username.
+     - Enter the personal access token as the password.
+
+
+
 ## Running the Scripts
-1. Log in to biowulf.
-2. Type 'sinteractive' and wait to be allocated a node.
-3. Navigate to the project root directory.
+1. Log in to biowulf and navigate to root directory
+2. Optionally type 'rm -r output' and 'rm -r processed' so that new output and processed folders can be generated
+3. Type 'sinteractive' and wait to be allocated a node.
 
 Execute the scripts sequentially:
 

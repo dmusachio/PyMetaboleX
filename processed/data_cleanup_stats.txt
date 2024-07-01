@@ -1,0 +1,3 @@
+Total number of data points examined: 26730
+Total non-numeric entries corrected: 0
+Total outliers corrected: 22

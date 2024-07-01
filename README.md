@@ -12,36 +12,53 @@ your_project_folder/
 │   └── master_data.xlsx
 ├── src/
 │   ├── data_harmonization.py
-│   └── evaluate_data.py
+│   ├── evaluate_data.py
+│   ├── run_all.py
+│   └── cluster.py
 ├── processed/
 │   ├── patients_summary.txt
 │   ├── cleaned_data.csv
-│   └── data_cleanup_stats.txt
+│   ├── data_cleanup_stats.txt
+│   ├── ranked_data.csv
+│   └── normalized_data.csv
 ├── output/
 │   └── data_info/
-│       ├── explained_variance_ratio.png
-│       ├── PCA_{i}_explained_variance.png    # for each principal component i
-│       └── PC{i}_boxplot.png                  # for each principal component i
+│       ├── ranked/
+│       │   ├── explained_variance_ratio_ranked.png
+│       │   ├── maov_test_results_ranked.txt
+│       │   ├── 3d_pca_plot_ranked.png
+│       ├── normalized/
+│       │   ├── explained_variance_ratio_normalized.png
+│       │   ├── maov_test_results_normalized.txt
+│       │   ├── 3d_pca_plot_normalized.png
+│       ├── variance_summary.txt
+│       └── shapiro_test_results.txt
+│   └── cluster/
+│       ├── ranked/
+│       │   ├── kmeans_clustering_ranked.png
+│       │   ├── hierarchical_clustering_ranked.png
+│       ├── normalized/
+│       │   ├── kmeans_clustering_normalized.png
+│       │   ├── hierarchical_clustering_normalized.png
 └── README.md
 
 input/: Contains all raw Excel data files.
 src/: Python scripts for data processing and evaluation.
 processed/: Processed data outputs, summaries, and statistics.
 output/: Visualizations such as variance explained and boxplots for each principal component
-
 ```
 ### Prerequisites
-- Access to NIH biowulf account.
+- Access to an NIH Biowulf account.
 
 ### Installing Dependencies
-All dependencies should be pre-installed on biowulf.
+All dependencies should be pre-installed on Biowulf.
 
 ## Setup
 
 ### Generating Personal Access Token and Cloning Repository
 
 1. **Generate a Personal Access Token (PAT)**:
-   - Log in to GitHub into an account that has been added to the repo.
+   - Log in to GitHub with an account that has been added to the repo.
    - Navigate to `Settings` > `Developer settings` > `Personal access tokens`.
    - Click on `Generate new token`.
    - Select the scopes or permissions you'd like to grant this token (at minimum, `repo` scope for private repositories).
@@ -49,7 +66,7 @@ All dependencies should be pre-installed on biowulf.
    - Copy the token now. You won’t be able to see it again!
 
 2. **Clone the Repository Using HTTPS**:
-   - Log into biowulf and navigate to root directory where you want to clone the code
+   - Log into Biowulf and navigate to the root directory where you want to clone the code.
    - Use the HTTPS URL for cloning.
    - Run the following command in the terminal:
      ```bash
@@ -59,17 +76,24 @@ All dependencies should be pre-installed on biowulf.
      - Enter your GitHub username.
      - Enter the personal access token as the password.
 
-
-
 ## Running the Scripts
-1. Log in to biowulf and navigate to root directory
-2. Optionally type 'rm -r output' and 'rm -r processed' so that new output and processed folders can be generated
-3. Type 'sinteractive' and wait to be allocated a node.
+1. Log in to Biowulf and navigate to the root directory.
+2. Optionally, type `rm -r output` and `rm -r processed` so that new output and processed folders can be generated.
+3. Type `sinteractive` and wait to be allocated a node.
 
 Execute the scripts sequentially:
 
-python3 src/data_harmonization.py \
+```bash
+python3 src/data_harmonization.py
 python3 src/evaluate_data.py
+python3 src/cluster.py
+```
+
+Alternatively, run all scripts at once:
+
+```bash
+python3 src/run_all.py
+```
 
 ## Output Details
 
@@ -79,20 +103,41 @@ The scripts will generate files in the `processed` and `output` directories as d
 - **`patients_summary.txt`**: A summary of patient data.
 - **`cleaned_data.csv`**: The cleaned and processed data.
 - **`data_cleanup_stats.txt`**: Statistics about the data cleaning process.
+- **`ranked_data.csv`**: The ranked data used for analysis.
+- **`normalized_data.csv`**: The normalized data used for analysis.
 
 ### Output Directory
-- **`explained_variance_ratio.png`**: Bar graph of the explained variance ratio by principal component.
-- **`PCA_{i}_explained_variance.png`**: Cumulative explained variance plots for each principal component.
-- **`PC{i}_boxplot.png`**: Box plots for each principal component across different phenotypes.
+- **`data_info`**:
+  - **`ranked`**:
+    - **`explained_variance_ratio_ranked.png`**: Bar graph of the explained variance ratio by principal component.
+    - **`maov_test_results_ranked.txt`**: MANOVA test results for ranked data.
+    - **`3d_pca_plot_ranked.png`**: 3D PCA plot for ranked data.
+  - **`normalized`**:
+    - **`explained_variance_ratio_normalized.png`**: Bar graph of the explained variance ratio by principal component.
+    - **`maov_test_results_normalized.txt`**: MANOVA test results for normalized data.
+    - **`3d_pca_plot_normalized.png`**: 3D PCA plot for normalized data.
+  - **`variance_summary.txt`**: Summary of the explained variance for each principal component.
+  - **`shapiro_test_results.txt`**: Shapiro-Wilk test results for normality testing.
+
+- **`cluster`**:
+  - **`ranked`**:
+    - **`kmeans_clustering_ranked.png`**: K-means clustering plot for ranked data.
+    - **`hierarchical_clustering_ranked.png`**: Hierarchical clustering dendrogram for ranked data.
+  - **`normalized`**:
+    - **`kmeans_clustering_normalized.png`**: K-means clustering plot for normalized data.
+    - **`hierarchical_clustering_normalized.png`**: Hierarchical clustering dendrogram for normalized data.
 
 ## Notes
 - Ensure the input files are correctly named and placed in the `input` directory.
 - The scripts dynamically set input and output paths relative to the script location, facilitating easy execution from any environment.
 
 ## Next Steps
-- Organize data into parametric and non-parametric data: Done
-- Run neccesary tests on parametric data (t-test, ANOVA)
-- Run neccesary tests on non-parametric data (Mann-Whitney U, Spearman's rank coefficient)
+- Fix cluster graphs to display more meaningful information
+- Run regression analysis
 
 ## Contributing
 Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue.
+
+
+
+

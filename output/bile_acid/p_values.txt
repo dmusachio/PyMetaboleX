@@ -1,0 +1,13 @@
+Cholic acid: p-value = 0.05609
+Chenodeoxycholic acid: p-value = 0.16361
+Deoxycholic acid: p-value = 0.00632
+Glycocholic acid: p-value = 0.83974
+Glycochenodeoxycholic acid: p-value = 0.74000
+Glycodeoxycholic acid: p-value = 0.02525
+Glycolitocholic acid: p-value = 0.05984
+Glycolitocholic acid sulfate: p-value = 0.75343
+Glycoursodeoxycholic acid: p-value = 0.42829
+Taurocholic acid: p-value = 0.42451
+Taurochenodeoxycholic acid: p-value = 0.60492
+Taurodeoxycholic acid: p-value = 0.97552
+Taurolitocholic acid: p-value = 0.70651

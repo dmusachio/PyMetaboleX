@@ -40,6 +40,7 @@ your_project_folder/
 │       ├── normalized/
 │       │   ├── kmeans_clustering_normalized.png
 │       │   ├── hierarchical_clustering_normalized.png
+│   └── bile_acid/  (TODO!!!)
 └── README.md
 
 input/: Contains all raw Excel data files.
@@ -87,9 +88,10 @@ Execute the scripts sequentially:
 python3 src/data_harmonization.py
 python3 src/evaluate_data.py
 python3 src/cluster.py
+python3 src/bile_acid.py
 ```
 
-Alternatively, run all scripts at once:
+Alternatively, run all scripts at once (CURRENTLY DOES NOT RUN bile_acid.py):
 
 ```bash
 python3 src/run_all.py
@@ -107,6 +109,20 @@ The scripts will generate files in the `processed` and `output` directories as d
 - **`normalized_data.csv`**: The normalized data used for analysis.
 
 ### Output Directory
+
+- **`bile_acid`**:
+  - **`combined_sam_control_boxplot.png`**: Box plot comparing combined SAM (Marasmus and Kwashiorkor) versus Control for total bile acids, glycine-conjugated, taurine-conjugated, and unconjugated bile acids.
+  - **`combined_sam_control_p_values.txt`**: P-values from the Mann-Whitney U test comparing combined SAM (Marasmus and Kwashiorkor) versus Control.
+  - **`p_values.txt`**: P-values for individual bile acids from t-tests.
+  - **`Cholic_acid`**:
+    - **`Cholic_acid_boxplot.png`**: Box plot for Cholic acid levels by subject diagnosis.
+  - **`Deoxycholic_acid`**:
+    - **`Deoxycholic_acid_boxplot.png`**: Box plot for Deoxycholic acid levels by subject diagnosis.
+  - **`Glycodeoxycholic_acid`**:
+    - **`Glycodeoxycholic_acid_boxplot.png`**: Box plot for Glycodeoxycholic acid levels by subject diagnosis.
+  - **`Glycolitocholic_acid`**:
+    - **`Glycolitocholic_acid_boxplot.png`**: Box plot for Glycolitocholic acid levels by subject diagnosis.
+
 - **`data_info`**:
   - **`ranked`**:
     - **`explained_variance_ratio_ranked.png`**: Bar graph of the explained variance ratio by principal component.

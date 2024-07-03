@@ -1,0 +1,4 @@
+Number of columns that failed the Shapiro-Wilk test and were log transformed: 573
+Number of columns that failed the Shapiro-Wilk test after log transformation: 270
+Total columns: 899
+Percentage passing after log transformation: 69.97%

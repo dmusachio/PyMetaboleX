@@ -106,7 +106,7 @@ python3 src/cluster.py
 python3 src/bile_acid.py
 ```
 
-Alternatively, run all scripts at once (CURRENTLY DOES NOT RUN bile_acid.py):
+Alternatively, run all scripts at once:
 
 ```bash
 python3 src/run_all.py
@@ -150,7 +150,7 @@ The scripts will generate files in the `processed` and `output` directories as d
   - **`variance_summary.txt`**: Summary of the explained variance for each principal component.
   - **`shapiro_test_results.txt`**: Shapiro-Wilk test results for normality testing.
 
-- **`cluster`**:
+- **`cluster (CURRENTLY UNDER CONSTRUCTION: ERRORS WITH DISPLAY OF PHENOTYPES)`**:
   - **`ranked`**:
     - **`kmeans_clustering_ranked.png`**: K-means clustering plot for ranked data.
     - **`hierarchical_clustering_ranked.png`**: Hierarchical clustering dendrogram for ranked data.

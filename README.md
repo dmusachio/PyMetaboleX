@@ -11,6 +11,7 @@ your_project_folder/
 │   ├── meta_data.xlsx
 │   └── master_data.xlsx
 ├── src/
+│   ├── bile_acid.py
 │   ├── data_harmonization.py
 │   ├── evaluate_data.py
 │   ├── run_all.py
@@ -22,31 +23,43 @@ your_project_folder/
 │   ├── ranked_data.csv
 │   └── normalized_data.csv
 ├── output/
-│   └── data_info/
-│       ├── ranked/
-│       │   ├── explained_variance_ratio_ranked.png
-│       │   ├── maov_test_results_ranked.txt
-│       │   ├── 3d_pca_plot_ranked.png
-│       ├── normalized/
-│       │   ├── explained_variance_ratio_normalized.png
-│       │   ├── maov_test_results_normalized.txt
-│       │   ├── 3d_pca_plot_normalized.png
-│       ├── variance_summary.txt
-│       └── shapiro_test_results.txt
-│   └── cluster/
-│       ├── ranked/
-│       │   ├── kmeans_clustering_ranked.png
-│       │   ├── hierarchical_clustering_ranked.png
-│       ├── normalized/
-│       │   ├── kmeans_clustering_normalized.png
-│       │   ├── hierarchical_clustering_normalized.png
-│   └── bile_acid/  (TODO!!!)
+│   ├── bile_acid/
+│   │   ├── combined_sam_control_boxplot.png
+│   │   ├── combined_sam_control_p_values.txt
+│   │   ├── p_values.txt
+│   │   ├── Cholic_acid/
+│   │   │   └── Cholic_acid_boxplot.png
+│   │   ├── Deoxycholic_acid/
+│   │   │   └── Deoxycholic_acid_boxplot.png
+│   │   ├── Glycodeoxycholic_acid/
+│   │   │   └── Glycodeoxycholic_acid_boxplot.png
+│   │   ├── Glycolitocholic_acid/
+│   │   │   └── Glycolitocholic_acid_boxplot.png
+│   ├── cluster/
+│   │   ├── ranked/
+│   │   │   ├── kmeans_clustering_ranked.png
+│   │   │   ├── hierarchical_clustering_ranked.png
+│   │   ├── normalized/
+│   │   │   ├── kmeans_clustering_normalized.png
+│   │   │   └── hierarchical_clustering_normalized.png
+│   ├── data_info/
+│   │   ├── ranked/
+│   │   │   ├── explained_variance_ratio_ranked.png
+│   │   │   ├── maov_test_results_ranked.txt
+│   │   │   └── 3d_pca_plot_ranked.png
+│   │   ├── normalized/
+│   │   │   ├── explained_variance_ratio_normalized.png
+│   │   │   ├── maov_test_results_normalized.txt
+│   │   │   └── 3d_pca_plot_normalized.png
+│   │   ├── variance_summary.txt
+│   │   └── shapiro_test_results.txt
 └── README.md
 
 input/: Contains all raw Excel data files.
 src/: Python scripts for data processing and evaluation.
 processed/: Processed data outputs, summaries, and statistics.
-output/: Visualizations such as variance explained and boxplots for each principal component
+output/: Visualizations such as variance explained and boxplots for each principal component.
+
 ```
 ### Prerequisites
 - Access to an NIH Biowulf account.

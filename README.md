@@ -53,12 +53,22 @@ your_project_folder/
 │   │   │   └── 3d_pca_plot_normalized.png
 │   │   ├── variance_summary.txt
 │   │   └── shapiro_test_results.txt
+├── ref/
+│   └── Impaired Bile Acid Homeostasis in Children with Severe Acute Malnutrition.pdf
 └── README.md
 
 input/: Contains all raw Excel data files.
 src/: Python scripts for data processing and evaluation.
 processed/: Processed data outputs, summaries, and statistics.
 output/: Visualizations such as variance explained and boxplots for each principal component.
+ref/: Contains reference materials.
+
+
+
+
+
+
+
 
 ```
 ### Prerequisites

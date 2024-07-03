@@ -62,7 +62,6 @@ src/: Python scripts for data processing and evaluation.
 processed/: Processed data outputs, summaries, and statistics.
 output/: Visualizations such as variance explained and boxplots for each principal component.
 ref/: Contains reference materials.
-
 ```
 ### Prerequisites
 - Access to an NIH Biowulf account.

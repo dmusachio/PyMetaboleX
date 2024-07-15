@@ -1,0 +1,4 @@
+Total_BA: p-value = 0.78119
+Total_Glycine_Conjugated: p-value = 0.43161
+Total_Taurine_Conjugated: p-value = 0.82024
+Total_Unconjugated: p-value = 0.70470

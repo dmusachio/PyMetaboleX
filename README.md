@@ -1,67 +1,170 @@
-# Data Harmonization and Analysis Scripts
+# Malnutrition Metabolite Data Harmonization and Analysis
 
 ## Overview
-The project includes scripts that process, harmonize, and analyze data from three input Excel files. These scripts perform data cleaning, patient ID matching, phenotype harmonization, and statistical analysis using PCA and MANOVA.
+This project involves a comprehensive data processing pipeline that harmonizes and analyzes metabolite data from multiple Excel input files. The scripts in this project perform a series of tasks including data cleaning, patient ID matching, phenotype harmonization, and extensive statistical analysis. The analysis includes methods such as Principal Component Analysis (PCA) and Multivariate Analysis of Variance (MANOVA). Additionally, the pipeline includes steps for quality control, clustering analysis, bile acid analysis, linear regression, and random forest classification. The aim is to ensure data integrity and provide meaningful insights into metabolite levels across different subject groups, specifically focusing on conditions such as Kwashiorkor, Marasmus, and other related phenotypes.
+
 
 ## Directory Structure
 ```plaintext
-your_project_folder/
-├── input/
-│   ├── metabolite_data.xlsx
-│   ├── meta_data.xlsx
-│   └── master_data.xlsx
-├── src/
-│   ├── bile_acid.py
-│   ├── data_harmonization.py
-│   ├── evaluate_data.py
-│   ├── run_all.py
-│   └── cluster.py
-├── processed/
-│   ├── patients_summary.txt
-│   ├── cleaned_data.csv
-│   ├── data_cleanup_stats.txt
-│   ├── ranked_data.csv
-│   └── normalized_data.csv
-├── output/
-│   ├── bile_acid/
-│   │   ├── combined_sam_control_boxplot.png
-│   │   ├── combined_sam_control_p_values.txt
-│   │   ├── p_values.txt
-│   │   ├── Cholic_acid/
-│   │   │   └── Cholic_acid_boxplot.png
-│   │   ├── Deoxycholic_acid/
-│   │   │   └── Deoxycholic_acid_boxplot.png
-│   │   ├── Glycodeoxycholic_acid/
-│   │   │   └── Glycodeoxycholic_acid_boxplot.png
-│   │   ├── Glycolitocholic_acid/
-│   │   │   └── Glycolitocholic_acid_boxplot.png
-│   ├── cluster/
-│   │   ├── ranked/
-│   │   │   ├── kmeans_clustering_ranked.png
-│   │   │   ├── hierarchical_clustering_ranked.png
-│   │   ├── normalized/
-│   │   │   ├── kmeans_clustering_normalized.png
-│   │   │   └── hierarchical_clustering_normalized.png
-│   ├── data_info/
-│   │   ├── ranked/
-│   │   │   ├── explained_variance_ratio_ranked.png
-│   │   │   ├── maov_test_results_ranked.txt
-│   │   │   └── 3d_pca_plot_ranked.png
-│   │   ├── normalized/
-│   │   │   ├── explained_variance_ratio_normalized.png
-│   │   │   ├── maov_test_results_normalized.txt
-│   │   │   └── 3d_pca_plot_normalized.png
-│   │   ├── variance_summary.txt
-│   │   └── shapiro_test_results.txt
-├── ref/
-│   └── Impaired Bile Acid Homeostasis in Children with Severe Acute Malnutrition.pdf
-└── README.md
+├── input
+│   ├── master_data.xlsx
+│   ├── metabolite_data.xlsx
+│   ├── meta_data.xlsx
+│   └── qc.xlsx
+├── output
+│   ├── bile_acid
+│   │   ├── Cholic_acid
+│   │   │   └── Cholic_acid_boxplot.png
+│   │   ├── combined_p_values.txt
+│   │   ├── combined_sam_control_boxplot.png
+│   │   ├── combined_sam_control_p_values.txt
+│   │   ├── Deoxycholic_acid
+│   │   │   └── Deoxycholic_acid_boxplot.png
+│   │   ├── Glycodeoxycholic_acid
+│   │   │   └── Glycodeoxycholic_acid_boxplot.png
+│   │   ├── Glycolitocholic_acid
+│   │   │   └── Glycolitocholic_acid_boxplot.png
+│   │   └── p_values.txt
+│   ├── cluster
+│   │   ├── normalized
+│   │   │   ├── hierarchical_clustering_normalized.png
+│   │   │   └── kmeans_clustering_normalized.png
+│   │   └── ranked
+│   │       ├── hierarchical_clustering_ranked.png
+│   │       └── kmeans_clustering_ranked.png
+│   ├── data_info
+│   │   ├── normalized
+│   │   │   ├── 3d_pca_plot_normalized.png
+│   │   │   ├── explained_variance_ratio_normalized.png
+│   │   │   └── maov_test_results_normalized.txt
+│   │   ├── ranked
+│   │   │   ├── 3d_pca_plot_ranked.png
+│   │   │   ├── explained_variance_ratio_ranked.png
+│   │   │   └── maov_test_results_ranked.txt
+│   │   ├── shapiro_test_results.txt
+│   │   └── variance_summary.txt
+│   ├── linear_reg
+│   │   ├── Acetylcarnitine_regression.png
+│   │   ├── Carnitine_regression.png
+│   │   ├── Control_vs_Case_regression_summaries.txt
+│   │   └── Propionylcarnitine_regression.png
+│   ├── p_values
+│   │   ├── control_mam_vs_kwash_marasmus
+│   │   │   └── p_values_less_than_0.01.txt
+│   │   ├── control_vs_kwash
+│   │   │   ├── Deoxycholic_acid.png
+│   │   │   ├── Hippuric_acid.png
+│   │   │   └── p_values_less_than_0.01.txt
+│   │   ├── control_vs_kwash_marasmus
+│   │   │   └── p_values_less_than_0.01.txt
+│   │   ├── control_vs_marasmus
+│   │   │   ├── Alanine_.png
+│   │   │   ├── LPE_18_1.png
+│   │   │   ├── LPE_18_2.png
+│   │   │   ├── LPG_16_1.png
+│   │   │   ├── Lysophosphatidylcholine_a_C18_2.png
+│   │   │   ├── Methionine_sulfoxide.png
+│   │   │   ├── PA_16_0_18_1.png
+│   │   │   ├── PA_18_1_18_3.png
+│   │   │   ├── PE_P-18_0_20_4.png
+│   │   │   ├── PE_P-18_1_20_4.png
+│   │   │   ├── Phosphatidylcholine_ae_C40_1.png
+│   │   │   ├── p_values_less_than_0.01.txt
+│   │   │   └── Serine.png
+│   │   ├── mam_vs_kwash
+│   │   │   ├── Chenodeoxycholic_acid.png
+│   │   │   ├── Cholic_acid.png
+│   │   │   ├── LPA_22_3.png
+│   │   │   ├── LPI_19_0.png
+│   │   │   ├── PA_17_0_18_3.png
+│   │   │   ├── PG_16_0_22_2.png
+│   │   │   └── p_values_less_than_0.01.txt
+│   │   ├── mam_vs_marasmus
+│   │   │   ├── Alanine_.png
+│   │   │   ├── Diacylglyceride__16_1_18_1_.png
+│   │   │   ├── LPE_20_0.png
+│   │   │   ├── LPG_16_1.png
+│   │   │   ├── LPG_18_1.png
+│   │   │   ├── LPI_16_0.png
+│   │   │   ├── PA_16_0_18_1.png
+│   │   │   ├── PA_16_2_18_1.png
+│   │   │   ├── PA_17_0_18_1.png
+│   │   │   ├── PA_17_1_18_1.png
+│   │   │   ├── PA_17_2_18_1.png
+│   │   │   ├── PA_18_1_18_1.png
+│   │   │   ├── PA_18_1_18_3.png
+│   │   │   ├── PA_18_1_20_2.png
+│   │   │   ├── PA_18_1_20_3.png
+│   │   │   ├── PA_18_1_22_1.png
+│   │   │   ├── PA_18_1_22_2.png
+│   │   │   ├── PA_18_1_22_3.png
+│   │   │   ├── PG_15_0_18_1.png
+│   │   │   ├── PG_16_0_16_0.png
+│   │   │   ├── PG_16_0_22_2.png
+│   │   │   ├── PG_17_0_18_1.png
+│   │   │   ├── PG_17_1_18_1.png
+│   │   │   ├── PG_18_1_18_1.png
+│   │   │   ├── PG_18_1_18_3.png
+│   │   │   ├── PG_18_1_20_5.png
+│   │   │   ├── PG_18_1_22_0.png
+│   │   │   ├── PI_14_0_18_1.png
+│   │   │   ├── PI_18_0_20_4.png
+│   │   │   ├── PI_18_1_22_2.png
+│   │   │   ├── Proline.png
+│   │   │   ├── p_values_less_than_0.01.txt
+│   │   │   ├── Sarcosine.png
+│   │   │   └── Triacylglyceride__18_3_38_5_.png
+│   │   └── marasmus_vs_kwash
+│   │       ├── Alanine_.png
+│   │       ├── Ceramide__d18_2_24_0_.png
+│   │       ├── Decanoylcarnitine.png
+│   │       ├── Deoxycholic_acid.png
+│   │       ├── PA_18_1_18_3.png
+│   │       └── p_values_less_than_0.01.txt
+│   └── random_forest
+│       ├── all_groups
+│       │   ├── classification_report.csv
+│       │   ├── feature_importances.png
+│       │   └── top_features.txt
+│       ├── combined_vs_control
+│       │   ├── classification_report.csv
+│       │   ├── feature_importances.png
+│       │   └── top_features.txt
+│       ├── combined_vs_mam
+│       │   ├── classification_report.csv
+│       │   ├── feature_importances.png
+│       │   └── top_features.txt
+│       └── marasmus_vs_kwashiorkor
+│           ├── classification_report.csv
+│           ├── feature_importances.png
+│           └── top_features.txt
+├── processed
+│   ├── changes_log.txt
+│   ├── cleaned_data.csv
+│   ├── data_cleanup_stats.txt
+│   ├── normalized_data.csv
+│   ├── patients_summary.txt
+│   ├── processed_cleaned_data.csv
+│   ├── ranked_data.csv
+│   ├── rsd_plot.png
+│   ├── rsd_results.txt
+│   └── sorted_rsd.csv
+├── README.md
+├── ref
+│   └── Impaired Bile Acid Homeostasis in Children with Severe Acute Malnutrition.pdf
+└── src
+    ├── bile_acid.py
+    ├── calc_p.py
+    ├── cluster.py
+    ├── config.txt
+    ├── data_harmonization.py
+    ├── evaluate_data.py
+    ├── linear_reg.py
+    ├── qc.py
+    ├── random_forest.py
+    └── run_all.py
 
-input/: Contains all raw Excel data files.
-src/: Python scripts for data processing and evaluation.
-processed/: Processed data outputs, summaries, and statistics.
-output/: Visualizations such as variance explained and boxplots for each principal component.
-ref/: Contains reference materials.
+31 directories, 127 files
 ```
 ### Prerequisites
 - Access to an NIH Biowulf account.

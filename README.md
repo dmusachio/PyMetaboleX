@@ -199,17 +199,8 @@ All dependencies should be pre-installed on Biowulf.
 1. Log in to Biowulf and navigate to the root directory.
 2. Optionally, type `rm -r output` and `rm -r processed` so that new output and processed folders can be generated.
 3. Type `sinteractive` and wait to be allocated a node.
-
-Execute the scripts sequentially:
-
-```bash
-python3 src/data_harmonization.py
-python3 src/evaluate_data.py
-python3 src/cluster.py
-python3 src/bile_acid.py
-```
-
-Alternatively, run all scripts at once:
+4. Update the config.txt file as neccesary.
+5. Execute the script:
 
 ```bash
 python3 src/run_all.py
@@ -266,12 +257,8 @@ The scripts will generate files in the `processed` and `output` directories as d
 - The scripts dynamically set input and output paths relative to the script location, facilitating easy execution from any environment.
 
 ## Next Steps
-- Fix cluster graphs to display more meaningful information
-- Run regression analysis
+- Fix cluster graphs to display more meaningful information.
+- Run regression analysis.
 
 ## Contributing
 Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue.
-
-
-
-

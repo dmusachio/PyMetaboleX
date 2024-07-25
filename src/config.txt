@@ -1,0 +1,11 @@
+filter_column_constant=True
+filter_column_missing_rate_threshold=0.5
+filter_row_missing_rate_threshold=None
+filter_column_zero_rate_threshold=0.25
+replace_outlier_method=None
+nSD=5
+impute_method=half-min
+verbose=True
+rsd_threshold=20
+run_harmonization=False
+processed_data_file=processed/clean_final_data.csv

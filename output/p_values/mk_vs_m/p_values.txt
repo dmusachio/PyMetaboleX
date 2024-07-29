@@ -1,8 +1,0 @@
-Cysteine: 0.001156
-Glycolitocholic acid: 0.006918
-Hippuric acid: 0.002869
-Ceramide (d18:1/26:0): 0.004302
-Sphingomyelin C26:0: 0.002266
-Triacylglyceride (16:0_34:2): 0.009416
-Triacylglyceride (18:0_34:2): 0.008017
-Triacylglyceride (18:0_34:3): 0.007291

@@ -1,0 +1,8 @@
+Metabolite 10: 4e-06
+Metabolite 4: 0.00129
+Metabolite 5: 0.12
+Metabolite 6: 0.17
+Metabolite 1: 0.18
+Metabolite 2: 0.45
+Metabolite 7: 0.76
+Metabolite 9: 0.92

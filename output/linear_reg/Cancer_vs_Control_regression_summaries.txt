@@ -1,0 +1,216 @@
+Metabolite 1:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Metabolite 1   R-squared:                       0.208
+Model:                            OLS   Adj. R-squared:                  0.109
+Method:                 Least Squares   F-statistic:                     2.105
+Date:                Mon, 29 Jul 2024   Prob (F-statistic):              0.185
+Time:                        10:03:02   Log-Likelihood:                -12.495
+No. Observations:                  10   AIC:                             28.99
+Df Residuals:                       8   BIC:                             29.59
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.5303      0.472     -1.124      0.294      -1.618       0.558
+Phenotype      0.8839      0.609      1.451      0.185      -0.521       2.289
+==============================================================================
+Omnibus:                        1.518   Durbin-Watson:                   2.636
+Prob(Omnibus):                  0.468   Jarque-Bera (JB):                0.162
+Skew:                           0.287   Prob(JB):                        0.922
+Kurtosis:                       3.248   Cond. No.                         2.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Metabolite 2:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Metabolite 2   R-squared:                       0.044
+Model:                            OLS   Adj. R-squared:                 -0.076
+Method:                 Least Squares   F-statistic:                    0.3657
+Date:                Mon, 29 Jul 2024   Prob (F-statistic):              0.562
+Time:                        10:03:02   Log-Likelihood:                -13.439
+No. Observations:                  10   AIC:                             30.88
+Df Residuals:                       8   BIC:                             31.48
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.2429      0.519      0.468      0.652      -0.953       1.439
+Phenotype     -0.4049      0.670     -0.605      0.562      -1.949       1.139
+==============================================================================
+Omnibus:                        1.839   Durbin-Watson:                   1.790
+Prob(Omnibus):                  0.399   Jarque-Bera (JB):                1.161
+Skew:                          -0.773   Prob(JB):                        0.560
+Kurtosis:                       2.371   Cond. No.                         2.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Metabolite 4:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Metabolite 4   R-squared:                       0.999
+Model:                            OLS   Adj. R-squared:                  0.999
+Method:                 Least Squares   F-statistic:                     8000.
+Date:                Mon, 29 Jul 2024   Prob (F-statistic):           2.72e-13
+Time:                        10:03:02   Log-Likelihood:                 20.881
+No. Observations:                  10   AIC:                            -37.76
+Df Residuals:                       8   BIC:                            -37.16
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          1.1613      0.017     69.282      0.000       1.123       1.200
+Phenotype     -1.9355      0.022    -89.443      0.000      -1.985      -1.886
+==============================================================================
+Omnibus:                        1.536   Durbin-Watson:                   2.500
+Prob(Omnibus):                  0.464   Jarque-Bera (JB):                0.741
+Skew:                          -0.000   Prob(JB):                        0.690
+Kurtosis:                       1.667   Cond. No.                         2.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Metabolite 5:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Metabolite 5   R-squared:                       0.249
+Model:                            OLS   Adj. R-squared:                  0.155
+Method:                 Least Squares   F-statistic:                     2.652
+Date:                Mon, 29 Jul 2024   Prob (F-statistic):              0.142
+Time:                        10:03:02   Log-Likelihood:                -12.231
+No. Observations:                  10   AIC:                             28.46
+Df Residuals:                       8   BIC:                             29.07
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.5798      0.460      1.261      0.243      -0.480       1.640
+Phenotype     -0.9663      0.593     -1.629      0.142      -2.334       0.402
+==============================================================================
+Omnibus:                        2.033   Durbin-Watson:                   1.453
+Prob(Omnibus):                  0.362   Jarque-Bera (JB):                0.592
+Skew:                           0.594   Prob(JB):                        0.744
+Kurtosis:                       3.091   Cond. No.                         2.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Metabolite 6:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Metabolite 6   R-squared:                       0.288
+Model:                            OLS   Adj. R-squared:                  0.199
+Method:                 Least Squares   F-statistic:                     3.229
+Date:                Mon, 29 Jul 2024   Prob (F-statistic):              0.110
+Time:                        10:03:02   Log-Likelihood:                -11.967
+No. Observations:                  10   AIC:                             27.93
+Df Residuals:                       8   BIC:                             28.54
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.6231      0.448      1.392      0.201      -0.409       1.655
+Phenotype     -1.0385      0.578     -1.797      0.110      -2.371       0.294
+==============================================================================
+Omnibus:                        1.575   Durbin-Watson:                   0.826
+Prob(Omnibus):                  0.455   Jarque-Bera (JB):                0.748
+Skew:                          -0.001   Prob(JB):                        0.688
+Kurtosis:                       1.660   Cond. No.                         2.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Metabolite 7:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Metabolite 7   R-squared:                       0.019
+Model:                            OLS   Adj. R-squared:                 -0.104
+Method:                 Least Squares   F-statistic:                    0.1544
+Date:                Mon, 29 Jul 2024   Prob (F-statistic):              0.705
+Time:                        10:03:02   Log-Likelihood:                -13.567
+No. Observations:                  10   AIC:                             31.13
+Df Residuals:                       8   BIC:                             31.74
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.1599      0.525      0.304      0.769      -1.051       1.371
+Phenotype     -0.2665      0.678     -0.393      0.705      -1.830       1.297
+==============================================================================
+Omnibus:                        1.516   Durbin-Watson:                   2.757
+Prob(Omnibus):                  0.469   Jarque-Bera (JB):                1.084
+Skew:                           0.672   Prob(JB):                        0.581
+Kurtosis:                       2.109   Cond. No.                         2.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Metabolite 9:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           Metabolite 9   R-squared:                       0.009
+Model:                            OLS   Adj. R-squared:                 -0.115
+Method:                 Least Squares   F-statistic:                   0.07164
+Date:                Mon, 29 Jul 2024   Prob (F-statistic):              0.796
+Time:                        10:03:02   Log-Likelihood:                -13.618
+No. Observations:                  10   AIC:                             31.24
+Df Residuals:                       8   BIC:                             31.84
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.1095      0.528      0.207      0.841      -1.108       1.327
+Phenotype     -0.1824      0.682     -0.268      0.796      -1.754       1.389
+==============================================================================
+Omnibus:                        0.898   Durbin-Watson:                   2.720
+Prob(Omnibus):                  0.638   Jarque-Bera (JB):                0.692
+Skew:                          -0.329   Prob(JB):                        0.708
+Kurtosis:                       1.892   Cond. No.                         2.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Metabolite 10:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          Metabolite 10   R-squared:                       0.996
+Model:                            OLS   Adj. R-squared:                  0.996
+Method:                 Least Squares   F-statistic:                     2117.
+Date:                Mon, 29 Jul 2024   Prob (F-statistic):           5.50e-11
+Time:                        10:03:02   Log-Likelihood:                 14.247
+No. Observations:                  10   AIC:                            -24.49
+Df Residuals:                       8   BIC:                            -23.89
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -1.1597      0.033    -35.638      0.000      -1.235      -1.085
+Phenotype      1.9328      0.042     46.009      0.000       1.836       2.030
+==============================================================================
+Omnibus:                        0.069   Durbin-Watson:                   1.250
+Prob(Omnibus):                  0.966   Jarque-Bera (JB):                0.104
+Skew:                          -0.000   Prob(JB):                        0.949
+Kurtosis:                       2.500   Cond. No.                         2.92
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+

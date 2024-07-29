@@ -196,8 +196,9 @@ The scripts will generate files in the directories you specify in job_info.txt
 - Ensure the input files are correctly named and placed in the `input` directory.
 - The scripts dynamically set input and output paths relative to the script location, facilitating easy execution from any environment.
 
-## Contributing and Contact
-Contributions are welcome! If you have suggestions or improvements, please feel free to reach out to me at dmusachi@stanford.edu
 
-**Citation for MetabolomicsAnalyzer:**
-Daniel Musachio. 2024. *MetabolomicsAnalyzer: A Streamlined Workflow to Analyze Metabolomic Data in Python*. Unpublished tool. Available at [(https://github.com/dmusachio/MetabolomicsAnalyzer)].
+## Citation for MetabolomicsAnalyzer:
+Daniel Musachio. 2024. *MetabolomicsAnalyzer: A Streamlined Workflow to Analyze Metabolomic Data in Python*. Unpublished tool. Available at (https://github.com/dmusachio/MetabolomicsAnalyzer).
+
+## Contributing and Contact
+Contributions are welcome! If you have suggestions or improvements, please feel free to reach out to me at dmusachi@stanford.edu. Also, feel free to reach out for debuggining issues. I am very eager to have MetabolomicsAnalyzer help you in your research so please consider trying out this software and citing it if it produces something useful! Thank you very much!

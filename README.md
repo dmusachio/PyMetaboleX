@@ -200,4 +200,4 @@ The scripts will generate files in the directories you specify in job_info.txt
 Contributions are welcome! If you have suggestions or improvements, please feel free to reach out to me at dmusachi@stanford.edu
 
 **Citation for MetabolomicsAnalyzer:**
-Daniel Musachio. 2024. *MetabolomicsAnalyzer: A Streamlined Workflow to Analyze Metabolomic Data in Python*. Unpublished tool. Available at [Your Repository URL].
+Daniel Musachio. 2024. *MetabolomicsAnalyzer: A Streamlined Workflow to Analyze Metabolomic Data in Python*. Unpublished tool. Available at [(https://github.com/dmusachio/MetabolomicsAnalyzer)].

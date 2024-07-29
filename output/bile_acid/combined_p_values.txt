@@ -1,2 +1,0 @@
-Combined p-value (Stouffer's Z-score method): 0.00041
-Combined p-value (Fisher's method): 0.00063

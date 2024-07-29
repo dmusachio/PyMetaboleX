@@ -1,5 +1,7 @@
 # MetabolomicsAnalyzer
 
+![Logo](logo.png)
+
 ## Demo Video
 TBD
 

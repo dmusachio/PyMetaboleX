@@ -86,14 +86,14 @@ def perform_pca_and_save_results(data, output_dir):
     Returns:
     principal_components (ndarray): The principal components of the data.
     """
-    pca = PCA(n_components=3)
+    pca = PCA()
     principal_components = pca.fit_transform(data)
     explained_variance_ratio = pca.explained_variance_ratio_
     cumulative_explained_variance = np.cumsum(explained_variance_ratio)
 
     # Plot and save the explained variance ratio
     plt.figure(figsize=(8, 5))
-    plt.bar(range(1, 4), explained_variance_ratio, alpha=0.6)
+    plt.bar(range(1, len(explained_variance_ratio) + 1), explained_variance_ratio, alpha=0.6)
     plt.xlabel('Principal Components')
     plt.ylabel('Explained Variance Ratio')
     plt.title('Explained Variance Ratio by Principal Component')
@@ -121,9 +121,11 @@ def perform_manova_and_save_results(principal_components, phenotypes, output_dir
     phenotypes (Series): The phenotypes associated with the data.
     output_dir (str): The directory to save the output files.
     """
-    df_pca = pd.DataFrame(principal_components, columns=[f'PC{i}' for i in range(1, 4)])
+    num_components = principal_components.shape[1]
+    df_pca = pd.DataFrame(principal_components, columns=[f'PC{i}' for i in range(1, num_components + 1)])
     df_pca['Subject_Diagnosis'] = phenotypes
-    maov = MANOVA.from_formula('PC1 + PC2 + PC3 ~ C(Subject_Diagnosis)', data=df_pca)
+    formula = ' + '.join([f'PC{i}' for i in range(1, num_components + 1)]) + ' ~ C(Subject_Diagnosis)'
+    maov = MANOVA.from_formula(formula, data=df_pca)
     maov_results = maov.mv_test()
     with open(manova_test_results_path, 'w') as file:
         file.write(str(maov_results))
@@ -138,6 +140,10 @@ def plot_3d_pca(principal_components, phenotypes, output_dir):
     phenotypes (Series): The phenotypes associated with the data.
     output_dir (str): The directory to save the output files.
     """
+    if principal_components.shape[1] < 3:
+        print("Not enough principal components for a 3D plot.")
+        return
+    
     label_encoder = LabelEncoder()
     phenotypes_encoded = label_encoder.fit_transform(phenotypes)
     
@@ -154,19 +160,4 @@ def plot_3d_pca(principal_components, phenotypes, output_dir):
 
     legend = ax.legend(*scatter.legend_elements(), title="Phenotypes")
     legend_labels = [text.get_text().replace('$\\mathdefault{', '').replace('}$', '') for text in legend.get_texts()]
-    legend_texts = [label_encoder.inverse_transform([int(label)])[0] for label in legend_labels]
-    for text, label in zip(legend.get_texts(), legend_texts):
-        text.set_text(label)
-    ax.add_artist(legend)
-
-    plot_path = os.path.join(output_dir, '3d_pca_plot.png')
-    plt.savefig(plot_path)
-    plt.close()
-    print(f"3D PCA plot saved to {plot_path}")
-
-# Perform PCA and save results
-principal_components = perform_pca_and_save_results(metabolic_data, output_dir)
-perform_manova_and_save_results(principal_components, phenotypes, output_dir)
-plot_3d_pca(principal_components, phenotypes, output_dir)
-
-print("Data evaluation and analysis completed.")
+    legend_texts = [label_encoder.inverse_transform([int(label

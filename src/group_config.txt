@@ -1,6 +1,0 @@
-group_input_file=data/final_data.csv
-group1_name=Cancer
-group1=Throat Cancer
-group1=Eye Cancer
-group2_name=Control
-group2=Control

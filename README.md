@@ -1,7 +1,7 @@
 ![Logo](logo.png)
 ## Demo Video
-TBD
-
+[https://www.youtube.com/watch?v=0p9rDk9C25o
+](https://www.youtube.com/watch?v=0p9rDk9C25o)
 ## Overview
 This project involves a comprehensive data processing pipeline thatanalyzes metabolite data from an Excel input file (and an optional QC Excel file). The scripts in this project perform a series of tasks including data cleaning, csv generation, and extensive statistical analysis. The analysis includes methods such as Principal Component Analysis (PCA) and Multivariate Analysis of Variance (MANOVA). Additionally, the pipeline includes steps for quality control, clustering analysis, linear regression, and random forest classification. The aim is to ensure data integrity and provide meaningful insights into metabolite levels across different subject groups. While the data pipeline can be run on any metabolic data, the input data is 'fake' data that is a demo for users. The output directory is also 'fake' demo results. The 'output malnutrition' are the actual results comparing metabolic differences across Edematous and Non-Edematous (both forms of Severe Acute Malntrition) children from a cohort in Malawi.
 

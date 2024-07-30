@@ -1,0 +1,15 @@
+cluster.py
+data/edematous_and_non_edematous.csv
+output/cluster
+calc_p.py
+data/edematous_and_non_edematous.csv
+output/p_values
+linear_reg.py
+data/edematous_and_non_edematous.csv
+output/linear_reg
+random_forest.py
+data/edematous_and_non_edematous.csv
+output/random_forest
+evaluate_data.py
+data/edematous_and_non_edematous.csv
+output/evaluate_data

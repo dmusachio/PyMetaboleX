@@ -1,0 +1,6 @@
+group_input_file=data/final_data.csv
+group1_name=Edematous
+group1=Kwashiorkor
+group1=Marasmic Kwashiorkor
+group2_name=Non Edematous
+group2=Marasmus

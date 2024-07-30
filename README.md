@@ -8,51 +8,11 @@ This project involves a comprehensive data processing pipeline thatanalyzes meta
 
 ## Directory Structure
 ```plaintext
-├── output
-│   ├── cluster
-│   │   ├── hierarchical_clustering.png
-│   │   └── kmeans_clustering.png
-│   ├── cluster_r
-│   │   ├── hierarchical_clustering.png
-│   │   └── kmeans_clustering.png
-│   ├── evaluate_data
-│   │   ├── 3d_pca_plot.png
-│   │   ├── explained_variance_ratio.png
-│   │   ├── manova_test_results.txt
-│   │   └── variance_summary.txt
-│   ├── evaluate_data_r
-│   │   ├── 3d_pca_plot.png
-│   │   ├── explained_variance_ratio.png
-│   │   ├── manova_test_results.txt
-│   │   └── variance_summary.txt
-│   ├── linear_reg
-│   │   └── Cancer_vs_Control_regression_summaries.txt
-│   ├── linear_reg_r
-│   │   └── Cancer_vs_Control_regression_summaries.txt
-│   ├── p_values
-│   │   ├── Metabolite_10.png
-│   │   ├── Metabolite_1.png
-│   │   ├── Metabolite_2.png
-│   │   ├── Metabolite_4.png
-│   │   ├── Metabolite_5.png
-│   │   ├── Metabolite_6.png
-│   │   ├── Metabolite_7.png
-│   │   ├── Metabolite_9.png
-│   │   └── p_values.txt
-│   ├── p_values_r
-│   │   ├── Metabolite_10.png
-│   │   ├── Metabolite_1.png
-│   │   ├── Metabolite_2.png
-│   │   ├── Metabolite_4.png
-│   │   ├── Metabolite_5.png
-│   │   ├── Metabolite_6.png
-│   │   ├── Metabolite_7.png
-│   │   ├── Metabolite_9.png
-│   │   └── p_values.txt
-│   ├── random_forest
-│   │   └── classification_report.csv
-│   └── random_forest_r
-│       └── classification_report.csv
+├── input
+│   ├── ~$raw_data.xlsx
+│   ├── qc.xlsx
+│   └── raw_data.xlsx
+├── logo.png
 ├── output malnutrition
 │   ├── cluster
 │   │   ├── hierarchical_clustering.png
@@ -143,8 +103,6 @@ This project involves a comprehensive data processing pipeline thatanalyzes meta
     ├── linear_reg.py
     ├── random_forest.py
     └── run_jobs.py
-
-19 directories, 116 files
 
 ```
 ### Prerequisites

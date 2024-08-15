@@ -1,4 +1,5 @@
 ![Logo](logo.png)
+![Workflow](workflow.png)
 ## Demo Video
 [https://www.youtube.com/watch?v=0p9rDk9C25o
 ](https://www.youtube.com/watch?v=0p9rDk9C25o)

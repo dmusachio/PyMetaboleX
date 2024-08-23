@@ -161,4 +161,4 @@ The scripts will generate files in the directories you specify in job_info.txt
 Daniel Musachio. 2024. *PyMetaboleX: A Streamlined Workflow to Analyze Metabolomic Data in Python*. Unpublished tool. Available at https://github.com/dmusachio/PyMetaboleX.
 
 ## Contributing and Contact
-Contributions are welcome! If you have suggestions or improvements, please feel free to reach out to me at dmusachi@stanford.edu. Also, feel free to reach out for debuggining issues. I am very eager to have MetabolomicsAnalyzer help you in your research so please consider trying out this software and citing it if it produces something useful! Thank you very much!
+Contributions are welcome! If you have suggestions or improvements, please feel free to reach out to me at dmusachi@stanford.edu. Also, feel free to reach out for debuggining issues. I am very eager to have PyMetaboleX help you in your research so please consider trying out this software and citing it if it produces something useful! Thank you very much!

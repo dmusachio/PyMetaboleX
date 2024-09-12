@@ -156,6 +156,8 @@ The scripts will generate files in the directories you specify in job_info.txt
 - Ensure the input files are correctly named and placed in the `input` directory.
 - The scripts dynamically set input and output paths relative to the script location, facilitating easy execution from any environment.
 
+## Creator
+Daniel Musachio was the full stack developer for this project. He worked full time on this project from June to August.
 
 ## Citation for PyMetaboleX:
 Daniel Musachio. 2024. *PyMetaboleX: A Streamlined Workflow to Analyze Metabolomic Data in Python*. Unpublished tool. Available at https://github.com/dmusachio/PyMetaboleX.

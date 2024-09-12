@@ -107,7 +107,7 @@ This project involves a comprehensive data processing pipeline thatanalyzes meta
 
 ```
 ### Prerequisites
-- Access to an NIH Biowulf account.
+- Access to an NIH Biowulf account
 
 ### Installing Dependencies
 All dependencies should be pre-installed on Biowulf.
